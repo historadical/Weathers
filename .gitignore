@@ -1,0 +1,15 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+*.xcworkspace
+Pods/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+*.xcodeproj/project.xcsettings
+*.swiftpm/
+.swiftpm/xcode/
+.idea/
+*.lock
+*.plist
+*.keys
