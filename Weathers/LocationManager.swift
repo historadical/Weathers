@@ -5,14 +5,15 @@
 //  Created by Nic on 10/27/24.
 //
 
-import SwiftUI
 import CoreLocation
 import Combine
 
+// Conforming to `ObservableObject` allows us to bind properties of this class to our SwiftUI views.
 class LocationManager: NSObject, ObservableObject {
     
     private let manager = CLLocationManager()
     
+    // `@Published` properties tell SwiftUI views using them to update themselves.
     @Published var userLocation: CLLocation? = nil
     @Published var authStatus: CLAuthorizationStatus = .notDetermined
     
@@ -29,6 +30,7 @@ class LocationManager: NSObject, ObservableObject {
     }
 }
 
+// Conforming to `CLLocationManagerDelegate` allows us to get information about the user's location and auth status.
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
